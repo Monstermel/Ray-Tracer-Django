@@ -1,0 +1,47 @@
+{% extends 'layouts/baseRT.html' %}
+
+{% load static %}
+
+{% block contenidoRT %}
+
+<div id="main-content">
+    <div class="contenedor mrgn-t-25 center-content">
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+                {{ field }}
+            </div>
+            {% endfor %}
+            <div class="form-submit">
+                <input type="submit" value="Renderizar">
+            </div>
+        </form>
+    </div>
+
+    <div id="resultado" class="contenedor center-content column-direction">
+        {% if Image %}
+        <div class="center-content">
+            <h2>Resultado</h2>
+        </div>
+        <div class="center-content">
+            <img src="{% static 'img/result.jpg' %}" alt="Resultado">
+        </div>
+        {% endif %}
+        {% if Time %}
+        <div class="center-content">
+            <p>Tiempo de ejecucion: {{ Time }} segundos</p>
+        </div>
+        {% endif %}
+    </div>
+
+</div>
+
+{% if Image %}
+<script>
+    document.getElementById('resultado').scrollIntoView();
+</script>
+{% endif %}
+
+{% endblock %}

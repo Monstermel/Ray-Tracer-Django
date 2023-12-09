@@ -1,0 +1,61 @@
+body {
+    background-color: whitesmoke;
+}
+
+.contenedor {
+    max-width: 1300px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.mrgn-t-25 {
+    margin-top: 25px;
+
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+}
+
+.column-direction {
+    flex-direction: column;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 5px 25px 5px;
+    border-bottom: 5px solid greenyellow;
+}
+
+.header__titulo {
+    margin: 0;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.form-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+label {
+    margin-right: 10px;
+}
